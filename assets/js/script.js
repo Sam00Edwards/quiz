@@ -13,7 +13,7 @@ startButton.addEventListener("click", function () {
     $(".main-container").hide();
 })
 
-let myQuestions = [
+const myQuestions = [
     {
       question: "Who wrote Frankenstein?",
       answers: {
