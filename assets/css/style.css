@@ -5,6 +5,7 @@ body {
   color: #333;
   background: #072818;
   font-family: 'Lora', serif;
+  text-align: center;
 }
 
 h1, a {
@@ -14,11 +15,11 @@ h1, a {
   font-family: 'Lora', serif;
 }
 
-/* .question {
-  color: #f2ebd8;
+.question {
+  color: #b69b7d;
   text-align: justify;
-  background-color: #120f12;
-  display: inline;
+  /* background-color: #120f12; */
+  /* display: inline; */
   font-family: 'Lora', serif;
 }
 
@@ -27,7 +28,7 @@ h1, a {
   background-color: #120f12;
   color: #f2ebd8;
   font-family: 'Lora', serif;
-} */
+}
 
 #submit, #next, #start {
   font-family: sans-serif;
