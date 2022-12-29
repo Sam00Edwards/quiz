@@ -1,12 +1,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap);
 
+/* Body Styling */
+
 body {
   background: url(../images/pexels-pixabay-235985.jpg);
   font-size: 20px;
-  /* background: #072818; */
   font-family: 'Lora', serif;
   text-align: center;
 }
+
+/* Title Styling */
 
 h1, a {
   color: #f2ebd8;
@@ -14,6 +17,8 @@ h1, a {
   text-decoration: none;
   font-family: 'Lora', serif;
 }
+
+/* Question and Answers Styling */
 
 .question {
   color: #120f12;
@@ -37,6 +42,8 @@ h1, a {
   color: #f2ebd8;
 }
 
+/* Button Styling */
+
 button {
   font-family: 'Lora', serif;
   font-size: 22px;
@@ -52,6 +59,8 @@ button {
 button:hover {
   background-color: #030504;
 }
+
+/* Slide Styling */
 
 .slide  {
   position: absolute;
@@ -91,6 +100,7 @@ footer {
   height: 75px;
 }
 
+/* Social Media Icons Styling */
 
 #sm-icon li {
   padding: 4px;
@@ -105,6 +115,9 @@ footer {
 
 /* For screen sizes from  320px to 770px*/
 @media screen and (min-width: 320px) and (max-width: 770px) {
+
+  /* Questions and Answers Styling */
+
   .question {
     color: #120f12;
     font-size: 8vw;
@@ -127,6 +140,8 @@ footer {
     color: #f2ebd8;
   }
   
+  /* Button Styling */
+
   button {
     font-family: 'Lora', serif;
     font-size: 22px;
@@ -179,6 +194,8 @@ footer {
         border: none;
   }
   
+  /* Social Media Icon Styling */
+
   #sm-icon {
     float: left;
 }

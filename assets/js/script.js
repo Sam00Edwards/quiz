@@ -8,10 +8,15 @@
 // Functions
   function myQuiz(){
     
+    // Variable to store HTML results for each question
+
     const result = [];
 
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
+
+        // Variable to store HTML results for each answer
+
         const answers = [];
 
         for(letter in currentQuestion.answers) {
@@ -34,12 +39,17 @@
         );
         }
     );
+
+        // Outputting HTML to the page
+
 quizContainer.innerHTML=result.join("");
       }
       function showResult(){
 
         const answerContainers=quizContainer.querySelectorAll(".answers");
       
+        // Track answers
+
         let numCorrect=0;
         myQuestions.forEach(
           (currentQuestion, questionNumber) => {
@@ -48,6 +58,8 @@ quizContainer.innerHTML=result.join("");
             `input[name=question${questionNumber}]:checked`;
             const userAnswer=
             (answerContainer.querySelector(selector)|| {}).value;
+
+            // Log correct answers
 
             if(userAnswer===currentQuestion.correctAnswer){
 
@@ -60,6 +72,8 @@ quizContainer.innerHTML=result.join("");
               answerContainers[questionNumber].style.colour="red";
             }
           });
+
+          // Display correct answers
 
           resultContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         }
@@ -84,6 +98,8 @@ quizContainer.innerHTML=result.join("");
           showSlide(currentSlide + 1);
         }
       
+        // Main quiz text
+
         const myQuestions = [
           {
             question: "Who wrote Frankenstein?",
@@ -201,6 +217,8 @@ const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
 showSlide(currentSlide);
+
+// Event listeners
 
 submitButton.addEventListener("click", showResult);
 nextButton.addEventListener("click", showNextSlide);
