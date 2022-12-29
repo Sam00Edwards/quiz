@@ -19,7 +19,7 @@
 
         const answers = [];
 
-        for(letter in currentQuestion.answers) {
+        for(var letter in currentQuestion.answers) {
 
           // Radio button
         if (  answers.push(
