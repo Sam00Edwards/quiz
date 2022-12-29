@@ -16,14 +16,50 @@
 
 <body>
     <header>
-        <h1><a href="index.html">Literature Quiz</a></h1>
+        <h1 aria-label="Literature Quiz-go to home page"><a href="index.html">Literature Quiz</a></h1>
     </header>
     <div class="quiz-container">
         <div id="quiz"></div>
         </div>
-    <button id="next">Next</button>
-    <button id="submit">Submit</button>
+    <button aria-label="Next Button" id="next">Next</button>
+    <button aria-label="Submit Button" id="submit">Submit</button>
     <div id="results"></div>
+<!-- Footer -->
+
+<footer>
+    <nav>
+        <div id="sm-icon">
+            <ul>
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook Page (opens in a new tab).">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter Page (opens in a new tab).">
+                        <i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Insta Page (opens in a new tab).">
+                        <i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener"
+                        aria-label="Visit our TikTok Page (opens in a new tab).">
+                        <i class="fa-brands fa-tiktok"></i></a>
+                </li>
+            </ul>
+            <br>
+        </div>
+    </nav>
+
+    <!-- Font Awesome Script -->
+
+    <script src="https://kit.fontawesome.com/6cd03d9864.js" crossorigin="anonymous"></script>
+</footer>
+
     <script src="assets/js/script.js"></script>
 </body>
 
