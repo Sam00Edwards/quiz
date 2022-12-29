@@ -1,31 +1,35 @@
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap);
+
 body {
   font-size: 20px;
-  font-family: sans-serif;
   color: #333;
   background: #072818;
+  font-family: 'Lora', serif;
 }
 
-h1,
-a {
+h1, a {
   color: #f2ebd8;
   text-align: center;
   text-decoration: none;
+  font-family: 'Lora', serif;
 }
 
-.question {
+/* .question {
   color: #f2ebd8;
   text-align: justify;
   background-color: #120f12;
   display: inline;
+  font-family: 'Lora', serif;
 }
 
 .answers {
   margin-bottom: 20px;
   background-color: #120f12;
   color: #f2ebd8;
-}
+  font-family: 'Lora', serif;
+} */
 
-#submit {
+#submit, #next, #start {
   font-family: sans-serif;
   font-size: 20px;
   background-color: #297;
@@ -35,18 +39,34 @@ a {
   padding: 20px;
   cursor: pointer;
   margin-bottom: 20px;
+  font-family: 'Lora', serif;
 }
 
 #submit:hover {
   background-color: #3a8;
 }
 
+#next:hover {
+  background-color: #3a8;
+}
+
+#start:hover {
+  background-color: #3a8;
+}
+
+.scores {
+  color: #f2ebd8;
+  font-family: 'Lora', serif;
+}
+
 #score {
   color: green;
   font-weight: bold;
+  font-family: 'Lora', serif;
 }
 
 #incorrect {
   color: red;
   font-weight: bold;
+  font-family: 'Lora', serif;
 }

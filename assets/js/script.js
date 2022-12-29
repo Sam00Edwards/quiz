@@ -1,16 +1,8 @@
-const startButton = document.getElementById("btn-start")
-const questionBox = document.getElementById("question-box");
-const quitQuiz = document.getElementById("quit-quiz");
-const nextQuestion = document.getElementById("submit");
-const instructionBox = document.getElementById("instruction_box")
-const nextApp = document.getElementById("next-app");
-
-// adding addEventfunction (when the start button clicked)
-
-startButton.addEventListener("click", function () {
-    questionBox.classList.remove("question-containers");
-    instructionBox.setAttribute("class", "instruction-box-1");
-    $(".main-container").hide();
+(function(){
+  function myQuiz(){
+    const result=[];
+    
+  }
 })
 
 const myQuestions = [
