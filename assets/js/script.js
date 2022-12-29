@@ -17,13 +17,13 @@
         for(letter in currentQuestion.answers) {
 
           // Radio button
-          answers.push(
+        if (  answers.push(
             `<label>
             <input type="radio" name="question${questionNumber}" value="${letter}">
             ${letter} :
             ${currentQuestion.answers[letter]}
             </label>`
-          );
+        ));
         }
 
         result.push(
