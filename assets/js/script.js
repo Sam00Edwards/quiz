@@ -1,8 +1,11 @@
 (function(){
+
+  // Variables
   const quizContainer=document.getElementById("quiz");
   const resultContainer=document.getElementById("results");
   const submitButton=document.getElementById("submit");
-  
+
+// Functions
   function myQuiz(){
     
     const result=[];
@@ -14,12 +17,23 @@
 
         for(letter in currentQuestion.answer){
 
+          // Radio button
           answer.push(
             `<label>
             <input type="radio" name="question${questionNumber}" value="${letter}:${currentQuestion.answer[letter]}</label>`
           );
         }
+
+quizContainer.innerHTML=result.join("");
+
       }
+
+      function showResult(){
+
+        const answerContainers=quizContainer.querySelectorAll(".answers");
+      
+      }
+
     )
   }
 });
