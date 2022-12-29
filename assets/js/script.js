@@ -32,6 +32,26 @@ quizContainer.innerHTML=result.join("");
 
         const answerContainers=quizContainer.querySelectorAll(".answers");
       
+        let numCorrect=0;
+        myQuestions.forEach(
+          (currentQuestion, questionNumber) => {
+            const answerContainer = answerContainers[questionNumber];
+            const selector=
+            `input[name=question${questionNumber}]:checked`;
+            const userAnswer=
+            (answerContainer.querySelector(selector)|| {}).value;
+
+            if(userAnswer===currentQuestion.correctAnswer){
+
+              numCorrect++;
+
+              answerContainers[questionNumber].getElementsByClassName.colour="green";
+            }
+
+            else{
+              answerContainers[questionNumber].getElementsByClassName.colour="red";
+            }
+          });
       }
 
     )
