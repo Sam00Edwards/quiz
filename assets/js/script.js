@@ -1,32 +1,41 @@
 (function(){
 
   // Variables
-  const quizContainer=document.getElementById("quiz");
-  const resultContainer=document.getElementById("results");
-  const submitButton=document.getElementById("submit");
+  const quizContainer = document.getElementById("quiz");
+  const resultContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
 
 // Functions
   function myQuiz(){
     
-    const result=[];
+    const result = [];
 
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
-        const answer=[];
+        const answers = [];
 
-        for(letter in currentQuestion.answer){
+        for(letter in currentQuestion.answers) {
 
           // Radio button
-          answer.push(
+          answers.push(
             `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}:${currentQuestion.answer[letter]}</label>`
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+            </label>`
           );
         }
 
+        result.push(
+          `<div class="slide">
+          <div class="question"> ${currentQuestion.question}</div>
+          <div class="answers"> ${answers.join("")}</div>
+          </div>`
+        );
+        }
+    );
 quizContainer.innerHTML=result.join("");
-
       }
-
       function showResult(){
 
         const answerContainers=quizContainer.querySelectorAll(".answers");
@@ -44,35 +53,35 @@ quizContainer.innerHTML=result.join("");
 
               numCorrect++;
 
-              answerContainers[questionNumber].getElementsByClassName.colour="green";
+              answerContainers[questionNumber].style.colour="green";
             }
 
             else{
-              answerContainers[questionNumber].getElementsByClassName.colour="red";
+              answerContainers[questionNumber].style.colour="red";
             }
           });
 
-          resultContainer.innerHTML=`${numCorrect} out of ${myQuestions.length}`;
+          resultContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         }
 
-        function showSlide(n){
+        function showSlide(n) {
 
           slides[currentSlide].classList.remove('active-slide');
           slides[n].classList.add('active-slide');
-          currentSlide=n;
-          if(currentSlide===slides.length-1){
-            nextButton.style.display="none";
-            submitButton.style.display="inline-block";
+          currentSlide = n;
+          if(currentSlide === slides.length-1){
+            nextButton.style.display = "none";
+            submitButton.style.display = "inline-block";
           }
 
           else{
-            nextButton.style.display="inline-block";
-            submitButton.style.display="none";
+            nextButton.style.display = "inline-block";
+            submitButton.style.display = "none";
           }
         }
 
-        function showNextSlide(){
-          showSlide(currentSlide+1);
+        function showNextSlide() {
+          showSlide(currentSlide + 1);
         }
       
         const myQuestions = [
@@ -187,14 +196,12 @@ quizContainer.innerHTML=result.join("");
         ];
 myQuiz();
 
-const nextButton=document.getElementById("next");
-const slides=document.querySelectorAll(".slide");
-let currentSlide=0;
+const nextButton = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 
 showSlide(currentSlide);
 
-submitButton.addEventListener("click",showResult);
+submitButton.addEventListener("click", showResult);
 nextButton.addEventListener("click", showNextSlide);
-    )
-  }
-});
+})();
