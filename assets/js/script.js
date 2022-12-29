@@ -11,8 +11,7 @@
     const result=[];
 
     myQuestions.forEach(
-      (currentQuestion, questionNumber)
-      =>{
+      (currentQuestion, questionNumber) => {
         const answer=[];
 
         for(letter in currentQuestion.answer){
@@ -186,7 +185,16 @@ quizContainer.innerHTML=result.join("");
               correctAnswer: 'b'
             }
         ];
+myQuiz();
 
+const nextButton=document.getElementById("next");
+const slides=document.querySelectorAll(".slide");
+let currentSlide=0;
+
+showSlide(currentSlide);
+
+submitButton.addEventListener("click",showResult);
+nextButton.addEventListener("click", showNextSlide);
     )
   }
 });
